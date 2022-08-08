@@ -32,6 +32,7 @@
   import UnlockableAssetsShowcase from '$lib/components/gamification/avatar/UnlockableAssetsShowcase.svelte';
   import { writable, type Writable } from 'svelte/store';
   import { browser } from '$app/env';
+  import ChatWindow from '$lib/components/chat/ChatWindow.svelte';
 
   export let course: Course;
   export let user: UserSession;
@@ -69,6 +70,9 @@
           {/if}
         </div>
       {/if}
+      <div class="absolute right-4 bottom-0 m-4">
+        <ChatWindow />
+      </div>
     </div>
   </Drawer>
 
